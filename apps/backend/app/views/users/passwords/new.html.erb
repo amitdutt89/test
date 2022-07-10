@@ -1,0 +1,56 @@
+<section class="mt-5 mb-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center mb-5">
+        <h2 class="heading-section">
+          <a href="https://www.forbrightbank.com">
+            <%= image_tag "Forbright-logo-RGB.png", style: "height: 100px"%>
+          </a>
+        </h2>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-10">
+        <div class="wrap d-md-flex">
+          <!-- DIV RIGHT -->
+          <div id="divright" class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last"
+            style="background:linear-gradient(135deg,#2c5768 0%,#b6c2cb 100%)">
+            <div class="text w-100" >
+              <h2 style="font-size: 20px;font-weight: 100;" >Welcome to <h2>
+                <h5 style="font-size: 56px;color: white;"> Forbright</h5>
+              <p>Don't have an account?</p>
+              <a href="/users/sign_up" class="btn btn-white btn-outline-white">Sign Up</a>
+            </div>
+          </div>
+
+          <!-- DIV LEFT -->
+          <div id="divleft" class="login-wrap p-4 p-lg-5">
+            <div class="d-flex">
+              <div class="w-100">
+                <h3 class="mb-4">Password reset instructions</h3>
+              </div>
+              <div class="w-100" style="display: none;">
+                <p class="social-media d-flex justify-content-end">
+                  <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span
+                      class="fa fa-facebook"></span></a>
+                  <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span
+                      class="fa fa-twitter"></span></a>
+                </p>
+              </div>
+            </div>
+            <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+
+              <div class="form-group mb-3">
+                <label class="label" for="name">Email</label>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+              </div>
+              <div class="form-group">
+                <%= f.submit "Send me reset password instructions", class: 'form-control btn btn-green signin-button', style: "font-size: 16px;background: linear-gradient(135deg,#069b04 0%,#07d531 100%); color: white;" %>
+              </div>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

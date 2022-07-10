@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+  <style>
+
+  </style>
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../app/assets/stylesheets/container.css">
+  <link rel="icon" href="../app/assets/images/favicon.png">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyClIJVF9VgLJOvw3o_RG8oGYZpJ7tsf4J8&libraries=places"></script>
+
+
+  <title>Forbright</title>
+</head>
+
+<body style=" background: linear-gradient(191deg,#467689 100%,#dbe1e6 100%)">
+
+ 
+  <script type="text/javascript">
+      $(document).ready(function(){
+          var autocomplete;
+          var id = "location";
+
+          autocomplete = new google.maps.places.Autocomplete((document.getElementById(id)), {
+              types:['geocode'],
+          })
+
+      });
+  </script>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+ 
+
+
+  <section class="" >
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center mt-4">
+          <h2 class="heading-section">
+            <a href="https://www.forbrightbank.com"> 
+            <img src="../app/assets/images/forbright-logo-white.png" style="height: 100px;">
+            </a>
+          </h2>
+        </div>
+      </div>
+
+<form action="#" class="signin-form">
+
+      <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-8">
+          <div class="d-md-flex" 
+          style="background-color: white; 
+          box-shadow: 2px 3px 16px 5px rgb(0 0 0 / 24%); ">
+          <!-- DIV LEFT -->
+            <div id="divleft" class="col-md-12 p-4 p-lg-5">
+              <div class="d-flex">
+                <div class="w-100">
+                  <h3 class="mb-3" style="font-size: 1.5rem;
+                  font-weight: 700;
+                  line-height: 1.75rem;
+                  font-family: Mulish,Roboto,sans-serif;
+                  -webkit-font-smoothing: antialiased;">Property Info</h3>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <input type="text" id="location" class="form-control" style="cursor: pointer; background: transparent;border: none;border-bottom: solid 1px gray;" placeholder="Property Addres" required>
+              </div>
+              <div class="form-group mb-3">
+                <input type="text" class="form-control" style=" cursor: pointer; background: transparent;border: none;border-bottom: solid 1px gray;" placeholder="Email" required>
+              </div>
+              <div class="form-group mb-3">
+                <input type="text" class="form-control" style=" cursor: pointer; background: transparent;border: none;border-bottom: solid 1px gray;" placeholder="Phone">
+              </div>
+
+              <div class="d-flex">
+                <div class="w-100">
+                  <h3 class="mt-5 mb-3" style="font-size: 1.5rem;
+                  font-weight: 700;
+                  line-height: 1.75rem;
+                  font-family: Mulish,Roboto,sans-serif;
+                  -webkit-font-smoothing: antialiased;">Please specify type of project</h3>
+                </div>
+              </div>
+              <div class="form-group mb-3">
+                <div class="row">
+                  <div class="col-md-4">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="radio" name="ct" id="flexSwitchCheckDefault">
+                  <label class="form-check-label" for="flexSwitchCheckDefault" style="cursor: pointer; ">New Construction</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="radio" name="ct" id="flexSwitchCheckChecked" >
+                  <label class="form-check-label" for="flexSwitchCheckChecked" style="cursor: pointer; ">Upgrade</label>
+                </div>
+                  </div>
+                  <div class="col-md-4">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="radio" name="ct" id="flexSwitchCheckChecked1" >
+                  <label class="form-check-label" for="flexSwitchCheckChecked1" style="cursor: pointer; ">Complete Rehab</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="radio" name="ct" id="flexSwitchCheckChecked2" >
+                  <label class="form-check-label" for="flexSwitchCheckChecked2" style="cursor: pointer; ">Refinance</label>
+                </div>
+              </div>
+                </div>
+              </div>
+
+              <div class="d-flex">
+                <div class="w-100">
+                  <h3 class="mt-4 mb-3" style="font-size: 1.5rem;
+                  font-weight: 700;
+                  line-height: 1.75rem;
+                  font-family: Mulish,Roboto,sans-serif;
+                  -webkit-font-smoothing: antialiased;">Please select all the improvements that you are looking for</h3>
+                </div>
+              </div>
+             
+              <div class="form-group mb-3">
+                <div class="row">
+               <div class="col-md-4">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="wlf1">
+                    <label class="form-check-label" for="wlf1" style="cursor: pointer; ">Solar</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="wlf2" >
+                    <label class="form-check-label" for="wlf2" style="cursor: pointer; ">Roofing</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="wlf3" >
+                    <label class="form-check-label" for="wlf3" style="cursor: pointer; ">Heating & Cooling</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="wlf4" >
+                    <label class="form-check-label" for="wlf4" style="cursor: pointer; ">Insulation</label>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="wlf5">
+                    <label class="form-check-label" for="wlf5" style="cursor: pointer; ">Windows & Doors </label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="wlf6" >
+                    <label class="form-check-label" for="wlf6" style="cursor: pointer; ">Resiliency</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="wlf7" >
+                    <label class="form-check-label" for="wlf7" style="cursor: pointer; ">EV charging Station</label>
+                  </div>
+                  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="wlf8" >
+                    <label class="form-check-label" for="wlf8" style="cursor: pointer; ">Other</label>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+
+
+                <div class="form-group mt-5">
+
+                  <button type="submit" class="form-control btn btn-green signin-button " 
+                  style=" width: 200px;   background: linear-gradient(135deg,#4285f4 0%,#6ca1f6 100%);                    color: white;">
+                    
+                      CHECK ELIGIBILITY
+                  </button>
+                </div>
+
+                
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+
+    </div>
+  </section>
+
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<section class="mt-5 mb-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center mb-5">
+        <h2 class="heading-section">
+          <a href="https://www.forbrightbank.com">
+            <%= image_tag "Forbright-logo-RGB.png", style: "height: 100px"%>
+          </a>
+        </h2>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-12 col-lg-10">
+        <div class="wrap d-md-flex">
+          <!-- DIV RIGHT -->
+          <div id="divright" class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last"
+            style="background:linear-gradient(135deg,#2c5768 0%,#b6c2cb 100%)">
+            <div class="text w-100" >
+              <h2 style="font-size: 20px;font-weight: 100;" >Welcome to <h2>
+                <h5 style="font-size: 56px;color: white;"> Forbright</h5>
+              <p>Don't have an account?</p>
+              <a href="/users/sign_up" class="btn btn-white btn-outline-white">Sign Up</a>
+            </div>
+          </div>
+
+          <!-- DIV LEFT -->
+          <div id="divleft" class="login-wrap p-4 p-lg-5">
+            <div class="d-flex">
+              <div class="w-100">
+                <h3 class="mb-4">Sign In</h3>
+              </div>
+              <div class="w-100" style="display: none;">
+                <p class="social-media d-flex justify-content-end">
+                  <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span
+                      class="fa fa-facebook"></span></a>
+                  <a href="#" class="social-icon d-flex align-items-center justify-content-center"><span
+                      class="fa fa-twitter"></span></a>
+                </p>
+              </div>
+            </div>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+              <div class="form-group mb-3">
+                <label class="label" for="name">Email</label>
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+              </div>
+              <div class="form-group mb-3">
+                <label class="label" for="password">Password</label>
+                <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
+              </div>
+              <div class="form-group d-md-flex justify-content-center">
+                <div class="g-recaptcha" data-sitekey="6LdOQlIfAAAAAPX5iOqyKKHr2pCPjoUswHOSyHWG"></div>
+              </div>
+
+              <div class="form-group">
+                <%= f.submit "Sign In", class: 'form-control btn btn-green signin-button', style: "font-size: 16px;background: linear-gradient(135deg,#069b04 0%,#07d531 100%); color: white;" %>
+              </div>
+              <div class="form-group d-md-flex">
+
+                <% if devise_mapping.rememberable? %>
+                  <div class="w-50 text-left">
+                    <input type="checkbox" checked id="remember_me" style="    height: 18px;   width: 18px;cursor:pointer;">
+                    <span>
+                      <label class="mb-0 ml-2" style="position: absolute;margin-top: -2px;cursor:pointer;  "  for="chkrememberme"   >
+                        Remember Me
+                      </label>
+                    </span>
+                  </div>
+                <% end %>
+
+                <div class="w-50 text-md-right">
+                  <a href="/users/password/new">Forgot Password</a>
+                </div>
+              </div>
+            <% end %>
+            <div class=" mt-10 mb-4" style="background: hsla(0, 0%, 69%, 1);    margin: 20px 0 30px 0 !important;
+
+            height: 1px;
+
+            text-align: center;">
+              <span style="margin: -14px 5px 0px -27px !important;
+              position: absolute;
+              background-color: white;
+              width: 50px;">or </span>
+              </div>
+
+              <div class="form-group">
+
+                <button type="submit" class="form-control btn btn-green signin-button " style="    background: linear-gradient(135deg,#4285f4 0%,#6ca1f6 100%);                    color: white;">
+                  <a href="/users/auth/google_oauth2" class="" style= " font-size: 16px; color: white;">
+                    <span  style= " font-size: 18px;" class="fa fa-google mr-3"></span>
+                    Sign in with Google</a>
+                </button>
+              </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

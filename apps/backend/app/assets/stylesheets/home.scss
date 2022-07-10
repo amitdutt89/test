@@ -1,0 +1,30 @@
+.navbar-brand {
+  margin-left: 20px;
+}
+
+.password_icon {
+  margin-left: -50px !important;
+  cursor: pointer !important;
+  z-index: 5 !important; 
+  height: 38px; 
+  margin-top: 8px
+}
+
+.password_container {
+  width: 103% !important;
+}
+
+.logo_resizer {
+  height: 54px;
+  width: 105px;
+}
+
+.g-recaptcha {
+  transform: scale(1.12);
+  transform-origin: 0 0;
+  margin-bottom:16px;
+}
+
+.link {
+  margin: -11px;
+}
